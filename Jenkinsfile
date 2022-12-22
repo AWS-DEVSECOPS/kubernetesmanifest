@@ -30,8 +30,10 @@ stage('Clone repository') {
     }
   }
 }
-     
     }
-}
+ 
+ 
+} //stage closing
+}  // pipeline closing
 
 
