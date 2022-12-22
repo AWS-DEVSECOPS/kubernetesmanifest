@@ -1,10 +1,13 @@
-node {
-    def app
+pipeline{
+agent any
 
-    stage('Clone repository') {
-      
-
-        checkout scm
+options{
+timestamps()
+buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '3', daysToKeepStr: '', numToKeepStr: '3'))
+}
+stages{
+stage('Clone repository') {
+ checkout scm
     }
     stage('Update GIT') {
             script {
