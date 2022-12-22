@@ -18,7 +18,7 @@ spec:
         app: studentapp
     spec:
       containers:
-      - image: arjundevsecops/mavenrepo:75
+      - image: arjundevsecops/mavenrepo:79
         name: studentapp
         resources: {}
 status: {}
