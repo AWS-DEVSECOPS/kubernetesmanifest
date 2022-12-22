@@ -31,7 +31,13 @@ stage('Clone repository') {
   }
 }
     }
- 
+  stage('Deploy to k8s'){
+            steps{
+                script{
+			kubernetesDeploy (configs: 'deployment.yaml',kubeconfigId: 'kubectlconfig')
+                }
+            }
+        }
  
 } //stage closing
 }  // pipeline closing
