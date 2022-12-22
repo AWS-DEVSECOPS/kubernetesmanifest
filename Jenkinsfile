@@ -7,9 +7,12 @@ buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '3', 
 }
 stages{
 stage('Clone repository') {
+ steps{
  checkout scm
     }
+}
     stage('Update GIT') {
+     steps{
             script {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     withCredentials([usernamePassword(credentialsId: 'githubtoken', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
@@ -27,6 +30,8 @@ stage('Clone repository') {
     }
   }
 }
+     
+    }
 }
 
 
