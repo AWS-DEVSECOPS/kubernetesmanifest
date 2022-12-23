@@ -31,7 +31,7 @@ kind: Service
 metadata:
   name: lb-service
   labels:
-    app: lb-service
+    app: studentapp
 spec:
   type: LoadBalancer
   ports:
