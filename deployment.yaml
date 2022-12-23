@@ -18,7 +18,7 @@ spec:
         app: studentapp
     spec:
       containers:
-      - image: arjundevsecops/mavenrepo:83
+      - image: arjundevsecops/mavenrepo:84
         name: studentapp
         imagePullPolicy: IfNotPresent
         ports:
