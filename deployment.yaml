@@ -18,8 +18,11 @@ spec:
         app: studentapp
     spec:
       containers:
-      - image: arjundevsecops/mavenrepo:79
+      - image: arjundevsecops/mavenrepo:44
         name: studentapp
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8080
         resources: {}
 status: {}
 ---
